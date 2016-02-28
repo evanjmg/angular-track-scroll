@@ -23,24 +23,29 @@ Include JS file in index.html
 ```html
 <!-- Example  -->
 	<!-- container - where you put the-->
-	<div track-scroll track-height="'320'" tracking-id="tracking.id" track-duration="'300'" style='overflow: scroll;position:fixed; height:100vh;width:300px;' >
+	<div track-scroll
+			 track-height="'320'"
+			 tracking-id="tracking.id"
+			 track-duration="'300'" 
+			 style='overflow: scroll;position:fixed; height:100vh;width:300px;' >
 	<!-- ng-repeat -->
-	<div ng-repeat="item in tracking.items" style="height:300px;margin: 20px;width:300px;background-color:blue;color:white;text-align: center;">
-		{{item }}
+	<div ng-repeat="item in tracking.items"
+			 style="height:300px;margin: 20px;width:300px;background-color:blue;color:white;text-align: center;">
+				{{item }}
 	</div>
 	<div style="height:600px;"></div>
 ```
 <br/>
 Notice that the track-height of the item includes the margin as well (margin + height).
-##Directive Attributes
+#Directive Attributes
+directive attribute | value type
+------------ | -------------
+	- **track-scroll** | "", intiates directive 
+	**tracking-id** | "expression or 'string'"  
 
-	**track-scroll** - intiates directive
-		<br/>
-	**tracking-id**= "expression or 'string'"  
-		<br/>
-	**tracking-duration**="expression or 'string'"
-	<br/>
-	**track-height**="expression or 'string'" - make sure the height of the element is correct as the demo indicates (height:300px, margin:20px -> tracking-height="'320'")
+	**tracking-duration** | "expression or 'string'"
+
+	**track-height**| "expression or 'string'" - make sure the height of the element is correct as the demo indicates (height:300px, margin:20px -> tracking-height="'320'")
 #To Dos
 - Setup Grunt serve
 - Extract and rewrite scrollTo animation method
