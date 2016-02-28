@@ -1,0 +1,27 @@
+{
+  "name": "angular-track-scroll",
+  "homepage": "https://github.com/evanjmg/angular-track-scroll",
+  "authors": [
+    "Evan Gillogley <evanjmg@gmail.com>"
+  ],
+  "description": "A simple scroll directive to track and change ng-repeat index/id on scroll",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "scroll",
+    "angular",
+    "tracking"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-scroll": "^1.0.0"
+  }
+}
