@@ -7,10 +7,12 @@ A simple scroll directive to track and change ng-repeat index/id on scroll. This
  OR Copy the JS file: 
  <code> https://raw.githubusercontent.com/evanjmg/angular-track-scroll/master/dist/angular-track-scroll.js</code>
   <br/>
-Include JS file in index.html
- <code>
-  <script type="text/javascript" src="../dist/angular-track-scroll.js"></script>
- </code>
+Include JS files and dependencies in index.html
+```html
+ <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-scroll/angular-scroll.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-track-scroll/angular-track-scroll.js"></script>
+```
   <br/>
   Inject dependency
   <code>
@@ -38,14 +40,12 @@ Include JS file in index.html
 <br/>
 Notice that the track-height of the item includes the margin as well (margin + height).
 #Directive Attributes
-directive attribute | value type
+directive attribute | value type| description
 ------------ | -------------
-	- **track-scroll** | "", intiates directive 
-	**tracking-id** | "expression or 'string'"  
-
-	**tracking-duration** | "expression or 'string'"
-
-	**track-height**| "expression or 'string'" - make sure the height of the element is correct as the demo indicates (height:300px, margin:20px -> tracking-height="'320'")
+	**track-scroll** | "" | intiates directive 
+	**tracking-id** | "expression or 'string'" | index id of your array of items for ng-repeat 
+	**tracking-duration** | "expression or 'string'" | how long you want the animation to be
+	**track-height**| "expression or 'string'" | make sure the height of the element is correct as the demo indicates (height:300px, margin:20px -> tracking-height="'320'")
 #To Dos
 - Setup Grunt serve
 - Extract and rewrite scrollTo animation method
