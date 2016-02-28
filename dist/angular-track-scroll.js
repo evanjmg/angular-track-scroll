@@ -19,10 +19,11 @@
 						angular.element(element).bind("scroll", function() {
 								if (element[0].scrollTop && !otherEvent) {
 										scope.trackingId = parseInt((element[0].scrollTop)/scope.trackHeight); 
-										scope.$digest();
+										scope.$apply();
 								}
 							
        	 		});
+ 
 						scope.$watch(function () {
 							return scope.trackingId;
 						}, function () {
@@ -32,7 +33,7 @@
 							element.scrollTop(amount, scope.trackDuration);
 							$timeout(function() {
 								otherEvent = false;
-							}, scope.trackDuration);	 
+							},scope.trackDuration);	 
 						});
       
          scope.$on('destroy', function (){
