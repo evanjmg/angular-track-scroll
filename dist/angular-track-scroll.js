@@ -23,7 +23,7 @@
 								}
 							
        	 		});
- 
+ 						scope.delay = parseInt(scope.trackDuration) + 50;
 						scope.$watch(function () {
 							return scope.trackingId;
 						}, function () {
@@ -33,7 +33,7 @@
 							element.scrollTop(amount, scope.trackDuration);
 							$timeout(function() {
 								otherEvent = false;
-							},scope.trackDuration);	 
+							},scope.delay);	 
 						});
       
          scope.$on('destroy', function (){
