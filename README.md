@@ -19,7 +19,8 @@ Include JS file in index.html
  <br/>
 #Usage
 
-<code>
+
+```html
 <!-- Example  -->
 	<!-- container - where you put the-->
 	<div track-scroll track-height="'320'" tracking-id="tracking.id" track-duration="'300'" style='overflow: scroll;position:fixed; height:100vh;width:300px;' >
@@ -28,7 +29,7 @@ Include JS file in index.html
 		{{item }}
 	</div>
 	<div style="height:600px;"></div>
-</code>
+```
 <br/>
 Notice that the track-height of the item includes the margin as well (margin + height).
 ##Directive Attributes
