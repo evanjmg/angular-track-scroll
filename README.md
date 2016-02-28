@@ -1,19 +1,19 @@
 # Angular-Track-Scroll
 A simple scroll directive to track and change ng-repeat index/id on scroll. This works great with GoogleMaps or any other set of data you want to track with. It uses angular-scroll and angular. 
 # Demo
- - coming soon
+	(http://evanjmg.com/demo/trackscroll.html)
 #Install
  Install via Bower:
  <code>bower install angular-track-scroll --save</code>	
  <br/>
  OR Copy the JS file: 
- <code> https://raw.githubusercontent.com/evanjmg/angular-track-scroll/master/dist/angular-track-scroll.js</code>
+ (https://raw.githubusercontent.com/evanjmg/angular-track-scroll/master/dist/angular-track-scroll.js)
   <br/>
 Include JS files and dependencies in index.html
 ```html
  <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
 <script type="text/javascript" src="bower_components/angular-scroll/angular-scroll.min.js"></script>
-  <script type="text/javascript" src="bower_components/angular-track-scroll/angular-track-scroll.js"></script>
+  <script type="text/javascript" src="bower_components/angular-track-scroll/dist/angular-track-scroll.js"></script>
 ```
   <br/>
   Inject dependency
