@@ -4,17 +4,19 @@
 	<title>Angular Tracking Scroll Example</title>
 </head>
 <body ng-controller="TrackingCtrl as tracking">
+
 <h1 style="text-align: center;">Angular Tracking Scroll Example</h1>
+
 <label>Current Index:</label>
+
 <input ng-model="tracking.id" ng-model-options="{ updateOn: 'blur' }"></input>
+
 <button ng-click="tracking.submit(tracking.id)">Submit Changes to Id</button>
 
 <div track-scroll track-height="'320'" tracking-id="tracking.id" track-duration="'300'" style='overflow: scroll;position:fixed; height:100vh;width:300px;' >
 	
-	<div ng-repeat="item in tracking.items track by $index">
-			<div  style="height:300px;margin: 20px;width:300px;background-color:blue;color:white;text-align: center;">{{item }}
-			 </div>
-
+	<div ng-repeat="item in tracking.items" style="height:300px;margin: 20px;width:300px;background-color:blue;color:white;text-align: center;">
+		{{item }}
 	</div>
 	<div style="height:600px;"></div>
 </div>

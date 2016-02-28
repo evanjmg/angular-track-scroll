@@ -1,13 +1,48 @@
-# angular-track-scroll
-A simple scroll directive to track and change ng-repeat index/id on scroll
-
-#Setup
+# Angular-Track-Scroll
+A simple scroll directive to track and change ng-repeat index/id on scroll. This works great with GoogleMaps or any other set of data you want to track with. 
+#Install
+ Install via Bower:
+ <code>bower install angular-track-scroll --save</code>	
+ OR Copy the JS file: 
+ <code> https://raw.githubusercontent.com/evanjmg/angular-track-scroll/master/dist/angular-track-scroll.js</code>
+Include JS file in index.html
+ <code>
+  <script type="text/javascript" src="../dist/angular-track-scroll.js"></script>
+ </code>
+  Inject dependency
+  <code>
+  angular.module('Your App', ['trackScroll'])
+  </code>
 
 #Usage
 
+<code>
+<!-- Example  -->
+	<div track-scroll track-height="'320'" tracking-id="tracking.id" track-duration="'300'" style='overflow: scroll;position:fixed; height:100vh;width:300px;' >
+	
+	<div ng-repeat="item in tracking.items" style="height:300px;margin: 20px;width:300px;background-color:blue;color:white;text-align: center;">
+		{{item }}
+	</div>
+	<div style="height:600px;"></div>
+</code>
+Notice that the track-height of the item includes the margin as well (margin + height).
+##Directive Attributes
+	<b>track-scroll</b> - intiates directive
+		<br/>
+	<b>tracking-id</b>= "expression or 'string'"  
+		<br/>
+	<b>tracking-duration="expression or 'string'"
+	<br/>
+	<b>track-height</b>="expression or 'string'" - make sure the height of the element is correct as the demo indicates (height:300px, margin:20px -> tracking-height="'320'")
 #To Dos
 - Setup Grunt serve
 - Extract and rewrite scrollTo animation method
 - Add $window option
--Add offset option
+- Add offset option
 - Add Tests
+
+#Development
+ Fork or Clone Repo
+<code>git clone git@github.com:evanjmg/angular-track-scroll.git</code>
+<p></p>
+<code> bower install</code>
