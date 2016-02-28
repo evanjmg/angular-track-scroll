@@ -29,15 +29,17 @@ Include JS file in index.html
 	</div>
 	<div style="height:600px;"></div>
 </code>
+<br/>
 Notice that the track-height of the item includes the margin as well (margin + height).
 ##Directive Attributes
-	<strong>track-scroll</strong> - intiates directive
+
+	**track-scroll** - intiates directive
 		<br/>
-	<strong>tracking-id</strong>= "expression or 'string'"  
+	**tracking-id**= "expression or 'string'"  
 		<br/>
-	<strong>tracking-duration="expression or 'string'"
+	**tracking-duration**="expression or 'string'"
 	<br/>
-	<strong>track-height</strong>="expression or 'string'" - make sure the height of the element is correct as the demo indicates (height:300px, margin:20px -> tracking-height="'320'")
+	**track-height**="expression or 'string'" - make sure the height of the element is correct as the demo indicates (height:300px, margin:20px -> tracking-height="'320'")
 #To Dos
 - Setup Grunt serve
 - Extract and rewrite scrollTo animation method
