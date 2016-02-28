@@ -40,8 +40,8 @@ Include JS files and dependencies in index.html
 <br/>
 Notice that the track-height of the item includes the margin as well (margin + height).
 #Directive Attributes
-directive attribute | value type| description
------------- | -------------
+Directive attribute | Value type| Description
+------------ | ------------- | -------------
 	**track-scroll** | "" | intiates directive 
 	**tracking-id** | "expression or 'string'" | index id of your array of items for ng-repeat 
 	**tracking-duration** | "expression or 'string'" | how long you want the animation to be
