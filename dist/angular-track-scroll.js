@@ -15,31 +15,49 @@
 										'trackHeight': '=', 
 										'trackDuration': '=' },
 				 link: function (scope, element) { 
-				 	var otherEvent = false;
+				 		var otherEvent = false;
+
+				 		scope.delay = parseInt(scope.trackDuration) + 25;
+
 						angular.element(element).bind("scroll", function() {
+
 								if (element[0].scrollTop && !otherEvent) {
-										scope.trackingId = parseInt((element[0].scrollTop)/scope.trackHeight); 
-										scope.$apply();
-								}
-							
-       	 		});
- 						scope.delay = parseInt(scope.trackDuration) + 50;
-						scope.$watch(function () {
-							return scope.trackingId;
-						}, function () {
-								
-								var amount = scope.trackHeight * scope.trackingId;
-									otherEvent = true;
-							element.scrollTop(amount, scope.trackDuration);
+										otherEvent = true;
+
+										scope.$apply(function (){
+											scope.trackingId = parseInt((element[0].scrollTop)/scope.trackHeight);
+										});
 							$timeout(function() {
 								otherEvent = false;
-							},scope.delay);	 
+							}, scope.delay);
+								}
+       	 		});
+      
+				
+					var unBindWatch = scope.$watch(function () {
+							return scope.trackingId;
+						}, function () {
+							if (!otherEvent)  {
+								otherEvent = true;
+
+								var amount = scope.trackHeight * scope.trackingId;
+
+								element.scrollTop(amount, scope.trackDuration);
+								$timeout(function() {
+								otherEvent = false;
+							}, scope.delay);
+							}
+								
+						
+							 
 						});
       
          scope.$on('destroy', function (){
                 angular.element($window).unbind('scroll');
+                unBindWatch();
          });
 				 }
-			}
+			};
 		}
-	})();
+
+})();
